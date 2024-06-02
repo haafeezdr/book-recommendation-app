@@ -5,7 +5,7 @@ import DashboardPage from '../../components/DashboardPage';
 const Dashboard: React.FC = () => {
   const username ='';
   return (
-    <div>
+    <div className='bg-green-50'>
       <DashboardPage username={username} />
     </div>
   );

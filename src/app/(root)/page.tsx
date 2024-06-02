@@ -27,7 +27,7 @@ const IndexPage: React.FC = () => {
   
 
   return (
-    <div>
+    <div className=''> 
       {showWelcome && <WelcomePage />}
       {!showWelcome && !isLoggedIn && <LoginPage onLogin={handleLogin} />} {/* Pass the function directly */}
       {isLoggedIn && <DashboardPage username={username} />}

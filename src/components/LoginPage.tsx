@@ -36,9 +36,9 @@ const LoginPage: React.FC<LoginPageProps> = ({ onLogin }) => {
         </div>
         <div className="flex flex-col">
           <input
-            type="password"
+            type="email"
             id="password"
-            placeholder='Serial No'
+            placeholder='Email'
             value={password}
             onChange={(e) => setPassword(e.target.value)}
             className='placeholder:text-gray-500 border-t-0 border-l-0 border-r-0 border-b-2 text-gray-600 bg-green-50 outline-none border-[#389a54] py-1 pr-24 mt-2' required
