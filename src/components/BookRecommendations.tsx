@@ -1,4 +1,5 @@
-"use client";import React, { useState } from 'react';
+"use client";
+import React, { useState } from 'react';
 
 interface Book {
   ISBN: string;
@@ -48,28 +49,28 @@ const BookRecommendations: React.FC = () => {
   };
 
   return (
-    <div className="container mx-auto py-10">
-      <h1 className="text-2xl font-bold mb-4">Book Recommendations</h1>
+    <div className="container mx-auto  py-10">
+      <h1 className="text-2xl font-bold mb-4 text-green-950">Book Recommendations</h1>
       <form onSubmit={handleSearch} className="mb-4">
         <input
           type="text"
           value={query}
           onChange={(e) => setQuery(e.target.value)}
           placeholder="Search for books"
-          className="border p-2 mr-2 text-black"
+          className="border p-2 mr-2 text-black w-full"
         />
-        <button type="submit" className="bg-blue-500 text-white p-2">
+        <button type="submit" className="bg-green-500 text-white px-2 py-5">
           Search
         </button>
       </form>
-      {loading && <p>Loading...</p>}
+      {loading && <p className='text-green-500 font-bold text-xl'>Loading...</p>}
       {error && <p className="text-red-500">{error}</p>}
       <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
         {books.map((book, index) => (
           <div key={index} className="border p-4 rounded">
-            <h2 className="text-xl font-semibold">{book.title}</h2>
-            <p>Author: {book.author}</p>
-            <p>{book.description}</p>
+            <h2 className="text-xl font-semibold text-red-500 mb-2">{book.title}</h2>
+            <p className="text-gray-500 mb-1">Author: {book.author}</p><span className="text-black mb-1"> {book.year}</span>
+            <p className="text-gray-700 mb-1">{book.description}</p>
             <a href={book.pdf_link} target="_blank" rel="noopener noreferrer">
               <img src={book.img_link} alt={book.title} className="w-full h-auto" />
             </a>
