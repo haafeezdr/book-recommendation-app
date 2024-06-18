@@ -51,7 +51,7 @@ const BookRecommendations: React.FC = () => {
   return (
     <div className='w-full bg-green-50'>
       <div className=" m-[90px] flex flex-col gap-3">
-        <h1 className="text-xl font-bold mb-2 text-green-950">Book Recommendations</h1>
+        <h1 className="md:text-xl text-sm font-bold mb-2 text-green-950">Book Recommendations</h1>
         <form onSubmit={handleSearch} className="mb-4">
           <input
             type="text"
