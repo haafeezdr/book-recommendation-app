@@ -22,7 +22,7 @@ const LoginPage: React.FC<LoginPageProps> = ({ onLogin }) => {
   return (
     <div className="bg-green-50 flex flex-col w-full h-screen justify-center items-center gap-5">
       <h2 className="text-[24px] text-[#389a54] font-bold leading-[140%] text-center md:text-[36px]">Login</h2>
-      <Image src="/assets/logo1.png" alt="logo" className="absolute left-6 top-4" width={137} height={55} priority />
+      <Image src="/assets/recommend.jpeg" alt="logo" className="absolute left-6 top-4" width={137} height={55} priority />
       <form onSubmit={handleSubmit} className="flex flex-col gap-2">
         <div className="flex flex-col">
           <input
