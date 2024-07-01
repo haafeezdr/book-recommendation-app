@@ -50,17 +50,18 @@ const BookRecommendations: React.FC = () => {
 
   return (
     <div className='w-full bg-green-50'>
-      <div className=" m-[90px] flex flex-col gap-3">
+      <div className=" flex flex-col gap-3">
         <h1 className="md:text-xl text-sm font-bold mb-2 text-green-950">Book Recommendations</h1>
+        <p className="text-green-500 font-bold text-sm">Get related books based on your last read and also a link to download the book.</p>
         <form onSubmit={handleSearch} className="mb-4">
           <input
             type="text"
             value={query}
             onChange={(e) => setQuery(e.target.value)}
             placeholder="Input your last read book title"
-            className="border p-2 mr-2 text-black w-[30%] mb-2 rounded-md"
+            className="border p-2 mr-2 text-black lg:w-[30%] w-[100%] mb-2 rounded-md"
           />
-          <button type="submit" className="bg-green-500 text-white px-6 py-2 rounded-md">
+          <button type="submit" className="bg-green-500 text-white lg:px-6 py-2 px-4  text-sm rounded-md">
             Search
           </button>
         </form>

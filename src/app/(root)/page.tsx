@@ -5,7 +5,6 @@ import WelcomePage from '../../components/WelcomePage';
 import LoginPage from '../../components/LoginPage';
 import DashboardPage from '../../components/DashboardPage';
 
-
 const IndexPage: React.FC = () => {
   const [showWelcome, setShowWelcome] = useState(true);
   const [isLoggedIn, setIsLoggedIn] = useState(false);
@@ -14,22 +13,21 @@ const IndexPage: React.FC = () => {
   useEffect(() => {
     const timer = setTimeout(() => {
       setShowWelcome(false);
-    }, 3000);
+    }, 700);
 
     return () => clearTimeout(timer);
   }, []);
 
-  const handleLogin = (username: string) => { // Update the type of parameter
+  const handleLogin = (username: string) => {
     setUsername(username);
     setIsLoggedIn(true);
     setShowWelcome(false);
   };
-  
 
   return (
-    <div className=''> 
+    <div>
       {showWelcome && <WelcomePage />}
-      {!showWelcome && !isLoggedIn && <LoginPage onLogin={handleLogin} />} {/* Pass the function directly */}
+      {!showWelcome && !isLoggedIn && <LoginPage onLogin={handleLogin} />}
       {isLoggedIn && <DashboardPage username={username} />}
     </div>
   );
