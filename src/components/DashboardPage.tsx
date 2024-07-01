@@ -15,7 +15,9 @@ const DashboardPage: React.FC<DashboardProps> = ({ username }) => {
     '/assets/book1.jpeg', '/assets/book2.jpeg', '/assets/book3.jpeg', '/assets/book4.jpeg', 
     '/assets/book5.jpeg', '/assets/book6.jpeg', '/assets/book7.jpeg', '/assets/book8.jpeg',
     '/assets/book9.jpeg', '/assets/book10.jpeg', '/assets/book11.jpeg', '/assets/book12.jpeg',
-    '/assets/book13.jpeg'
+    '/assets/book13.jpeg', '/assets/book14.jpeg', '/assets/book15.jpeg', '/assets/book16.jpeg',
+    '/assets/book17.jpeg', '/assets/book18.jpeg', '/assets/book19.jpeg', '/assets/book20.jpeg',
+    '/assets/book21.jpeg', '/assets/book22.jpeg', '/assets/book23.jpeg', '/assets/book24.jpeg'
   ];
 
   return (

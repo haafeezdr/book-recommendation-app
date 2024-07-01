@@ -23,7 +23,7 @@ const LoginPage: React.FC<LoginPageProps> = ({ onLogin }) => {
     <div className="bg-green-50 flex w-full h-screen ">
       <Image src="/assets/loginbook.jpeg" alt="logo" className="lg:block hidden w-[50%] " width={137} height={55} priority />
       <div className='flex flex-col justify-center items-center lg:w-[50%] w-full  p-10 rounded-sm'>
-        <h2 className="text-[16px] text-[#389a54] font-bold leading-[140%] text-center md:text-[26px]">Login</h2>
+        <h2 className="text-[16px] text-[#389a54] font-bold leading-[140%] text-center md:text-[20px]">Login</h2>
         <Image src="/assets/recommend.png" alt="logo" className="absolute left-6 top-4 " width={137} height={55} priority />
         <form onSubmit={handleSubmit} className="flex flex-col gap-2">
           <div className="flex flex-col">
