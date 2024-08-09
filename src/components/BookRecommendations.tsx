@@ -73,9 +73,11 @@ const BookRecommendations: React.FC = () => {
               <h2 className="text-xl font-semibold text-red-500 mb-2">{book.title}</h2>
               <p className="text-gray-500 mb-1">Author: {book.author}</p><span className="text-black mb-1"> {book.year}</span>
               <p className="text-gray-700 mb-1 text-xs">{book.description}</p>
-              <a href={book.pdf_link} target="_blank" rel="noopener noreferrer">
-                <img src={book.img_link} alt={book.title} className="w-full h-auto text-blue-500" />
-              </a>
+              <button className='bg-gray-800 w-full p-3'>
+                <a href={book.pdf_link} target="_blank" rel="noopener noreferrer">
+                  <img src={book.img_link} alt={book.title} className="w-full h-auto text-blue-500" />
+                </a>
+              </button>
             </div>
           ))}
         </div>
