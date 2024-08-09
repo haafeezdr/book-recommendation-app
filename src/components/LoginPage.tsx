@@ -75,9 +75,9 @@ const LoginPage: React.FC<LoginPageProps> = ({ onLogin }) => {
             <form onSubmit={handleLoginSubmit} className="flex flex-col gap-2">
               <div className="flex flex-col">
                 <input
-                  type="text"
+                  type="email"
                   id="login-username"
-                  placeholder='Name'
+                  placeholder='Email'
                   value={username}
                   onChange={(e) => setUsername(e.target.value)}
                   className='placeholder:text-gray-500 border-t-0 border-l-0 border-r-0 border-b-2 bg-green-50 text-gray-600 outline-none border-[#389a54] py-1 pr-24 mt-2'
@@ -109,9 +109,9 @@ const LoginPage: React.FC<LoginPageProps> = ({ onLogin }) => {
             <form onSubmit={handleSignupSubmit} className="flex flex-col gap-2">
               <div className="flex flex-col">
                 <input
-                  type="text"
+                  type="email"
                   id="signup-username"
-                  placeholder='Name'
+                  placeholder='Email'
                   value={username}
                   onChange={(e) => setUsername(e.target.value)}
                   className='placeholder:text-gray-500 border-t-0 border-l-0 border-r-0 border-b-2 bg-green-50 text-gray-600 outline-none border-[#389a54] py-1 pr-24 mt-2'
