@@ -17,8 +17,13 @@ const LoginPage: React.FC<LoginPageProps> = ({ onLogin }) => {
     const storedUser = JSON.parse(localStorage.getItem(username) || '{}');
 
     if (storedUser && storedUser.password === password) {
-      onLogin(username); // Successfully logged in
-      setErrorMessage(''); // Clear any error messages
+      setErrorMessage('Loading...'); // Show loading message
+
+      // Simulate a 2-second delay before logging in
+      setTimeout(() => {
+        setErrorMessage(''); // Clear the error message
+        onLogin(username); // Successfully logged in
+      }, 2000);
     } else {
       setErrorMessage('Login failed. Please check your credentials.');
     }
@@ -89,7 +94,7 @@ const LoginPage: React.FC<LoginPageProps> = ({ onLogin }) => {
               </p>
             )}
             {errorMessage && (
-              <p className="text-red-500 text-center mb-4">
+              <p className={`text-center mb-4 ${errorMessage === 'Loading...' ? 'text-blue-500' : 'text-red-500'}`}>
                 {errorMessage}
               </p>
             )}
