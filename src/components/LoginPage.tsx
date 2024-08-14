@@ -41,6 +41,9 @@ const LoginPage: React.FC<LoginPageProps> = ({ onLogin }) => {
       setSignupSuccess(true); // Show success message
       setIsLogin(true); // Switch to login form
       setErrorMessage('');
+
+      setUsername('');
+      setPassword('');
     }
   };
 
